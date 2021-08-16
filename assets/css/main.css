@@ -1,0 +1,409 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 20%;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.tab.active {
+  border-left: 5px solid blue;
+  border-radius: 5px;
+}
+.tab:hover {
+  background-color: rgb(241, 248, 254);
+}
+
+.tab-content {
+  width: 80%;
+  padding: 10px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  border: 1px solid rgb(221, 221, 221);
+  background-color: rgb(255, 255, 255);
+}
+
+.swiper-button-next {
+  border-radius: 10px;
+  right: 0 !important;
+}
+
+.swiper-button-prev {
+  border-radius: 0 30px 30px 0;
+  left: 20px !important;
+  border-left: 1px solid white;
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  margin: 10px;
+  flex-direction: row;
+  z-index: 1000;
+}
+.logo a {
+  display: block;
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.logo a img {
+  height: 100%;
+  width: auto;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px 10px 100px 10px;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.container h2 {
+  font-weight: 500;
+}
+.button-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: flex;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+.btn.red {
+  background-color: #e76161;
+  color: #fff;
+}
+.btn.red:hover {
+  background-color: #e08383;
+}
+.btn.blue {
+  background-color: #3881e0;
+  color: #fff;
+}
+.btn.blue:hover {
+  background-color: #6ca3ec;
+}
+.btn.green {
+  background-color: #e4c356;
+  color: #fff;
+}
+.btn.green:hover {
+  background-color: #38e0c4;
+}
+.btn.orange {
+  background-color: #fcbc69;
+  color: #fff;
+}
+.btn.orange:hover {
+  background-color: #ffcf90;
+}
+.btn.dark {
+  background-color: #262626;
+  color: #fff;
+}
+.btn.dark:hover {
+  background-color: #363636;
+}
+.toast-container {
+  width: 400px;
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.toast-container .toast {
+  position: relative;
+  width: 100%;
+  background-color: rgb(17, 24, 32);
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.toast-container .toast:hover {
+  box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.15), 0 15px 15px -5px rgba(0, 0, 0, 0.1);
+}
+.toast-container .toast .t-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.toast-container .toast .t-title span {
+  font-size: 1.2rem;
+  padding: 0 10px 0 0;
+}
+.toast-container .toast .t-text {
+  color: rgb(175, 193, 250);
+  margin: 5px 0 0 0;
+}
+.toast-container .toast .t-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 50%;
+  right: 20px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  transform: rotate(45deg) translateY(-70%);
+  cursor: pointer;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+.toast-container .toast svg path{
+   fill: none;
+  stroke: #000;
+}
+.toast-container .toast .t-close:after, .toast-container .toast .t-close:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: #eee;
+  border-radius: 3px;
+}
+.toast-container .toast .t-close:after {
+  width: 2px;
+  height: 18px;
+}
+.toast-container .toast .t-close:before {
+  width: 18px;
+  height: 2px;
+}
+.toast-container .toast.active {
+  opacity: 1;
+  visibility: visible;
+}
+.toast-container .toast.system {
+  background-color: #77a1fc;
+}
+.toast-container .toast.system .t-text {
+  color: #eee;
+}
+.toast-container .toast.system .t-title {
+  color: #eee;
+}
+.toast-container .toast.success {
+  background-color: #4ef7c4;
+}
+.toast-container .toast.warning {
+  background-color: #fcbc69;
+}
+.toast-container .toast.warning .t-text {
+  color: #eee;
+}
+.toast-container .toast.warning .t-title {
+  color: #eee;
+}
+.toast-container .toast.bug {
+  background-color: #fc6969;
+}
+.toast-container .toast.bug .t-text {
+  color: #eee;
+}
+.toast-container .toast.bug .t-title {
+  color: #eee;
+}
+
+
+@media only screen and (max-width: 540px) {
+  .tab-container {
+    flex-direction: column;
+  } 
+
+  .toast-container{
+    width: 300px !important;
+  }
+
+  .tabs {
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: scroll;
+    width: 100%;
+    font-size: 12px;
+    height: 50px;
+  }
+
+  .tabs li {
+    white-space: pre;
+    margin: 0 7.5px;
+  }
+
+  .tab.active {
+    border-left: none;
+    border-bottom: 3px solid blue;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .tab-content {
+    width: 100%;
+    padding: 0;
+  }
+
+  .swiper-slide {
+    width: 200px !important;
+    padding: 0px;
+  }
+
+  .swiper-container {
+    padding: 20px 0 !important;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
