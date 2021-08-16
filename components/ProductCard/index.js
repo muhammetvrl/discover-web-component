@@ -1,7 +1,7 @@
 const template = document.createElement("template");
 template.innerHTML = `
 <style>
-@import url('http://${location.host}/components/ProductCard/syled.css')
+@import url('http://${window.location.host}/components/ProductCard/syled.css')
 </style>
 <div class="product-container">
     <div class="image-container">
